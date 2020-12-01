@@ -10,11 +10,6 @@ export const Navbar = ({status}) => {
     return ( 
         <nav className='nav-links'>
             <ul>
-                <li className='active'>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-            <ul style={{display: status === 'Home' ? 'flex' : 'none'}}>
                 <li className='txtlbl'><input type='color' onChange={ setTextColor } defaultValue={ state.text }  /></li>
                 <li className='bglbl'><input type='color' onChange={ setBackground } defaultValue={ state.bg } /></li>
                 <li className='primlbl'><input type='color' onChange={ setPrimary } defaultValue={ state.primary } /></li>
