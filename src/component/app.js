@@ -3,7 +3,7 @@ import { Navbar } from './navbar'
 import { ThemeContext } from '../context/ThemeContext'
 import spinner from '../assets/headerImg.png'
 import fb from '../assets/fb.png'
-import github from '../assets/insta.png'
+import github from '../assets/github.png'
 import linkedin from '../assets/link.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -11,31 +11,6 @@ import 'aos/dist/aos.css';
 AOS.init({
     duration : 2000
 })
-
-// window.addEventListener('DOMContentLoaded', () => {
-//     window.fbAsyncInit = function() {
-//         FB.init({
-//         appId      : 2636806746444538,
-//         cookie     : true,
-//         xfbml      : true,
-//         version    : 'v9.0'
-//         });
-        
-//         FB.AppEvents.logPageView();   
-//     };
-
-//     (function(d, s, id){
-//         var js, fjs = d.getElementsByTagName(s)[0];
-//         if (d.getElementById(id)) {return;}
-//         js = d.createElement(s); js.id = id;
-//         js.src = "https://connect.facebook.net/en_US/sdk.js";
-//         fjs.parentNode.insertBefore(js, fjs);
-//     }(document, 'script', 'facebook-jssdk'));
-
-//     FB.getLoginStatus(function(response) {
-//         statusChangeCallback(response);
-//     });
-// })
     
 const App = () => {
     const { state } = useContext(ThemeContext);
@@ -51,14 +26,14 @@ const App = () => {
                     <div className='home-header-content'>
                         <section className='text'>
                             <h2>Hi, My name is <span style={{color: state.primary}}>Mark Jayson Morilla</span></h2>
-                            <h3>I'm a UI/UX Web Designer &amp; Web Developer.</h3>
+                            <h3>I'm a Front-End Web Developer.</h3>
                             <button style={{border: `1px solid ${state.primary}`}} type='button'>Show Project</button>
                         </section>
                     </div>
                 </div>
                 <div id='content' className='content-container'>
                     <div className='graphics-content'>
-                        <section className='grph-text' data-aos='zoom-in-left'>
+                        <section style={{border: `1px solid ${ state.primary }`}} className='grph-text' data-aos='zoom-in-right'>
                             <div className='grph-content'>
                                 <h2 style={{color: state.primary}}>Graphics</h2>
                                 <h3>
@@ -71,7 +46,7 @@ const App = () => {
                                 </h3>
                             </div>
                         </section>
-                        <section className='log-text' data-aos='zoom-out-up'>
+                        <section style={{border: `1px solid ${ state.primary }`}} className='log-text' data-aos='zoom-out-up'>
                             <div className='log-content'>
                                 <h2 style={{color: state.primary}}>Logo</h2>
                                 <h3>
@@ -84,7 +59,7 @@ const App = () => {
                                 </h3>
                             </div>
                         </section>
-                        <section className='art-text' data-aos='zoom-in-right'>
+                        <section style={{border: `1px solid ${ state.primary }`}} className='art-text' data-aos='zoom-in-left'>
                             <div className='art-content'>
                                 <h2 style={{color: state.primary}}>Art Work</h2>
                                 <h3>
@@ -143,6 +118,14 @@ const App = () => {
                 <div className='linkedin'>
                     <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ linkedin } alt='linkedin' />
                 </div>
+            </div>
+            <div className='languages'>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >html</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >css</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >javascript</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >git</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >webpack</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >react</h4>
             </div>
             <div className='footer'>
                 <h3>&copy; Jayson Morilla</h3>
