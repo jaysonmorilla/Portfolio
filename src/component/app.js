@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import { Navbar } from './navbar'
 import { ThemeContext } from '../context/ThemeContext'
 import spinner from '../assets/headerImg.png'
+import fb from '../assets/fb.png'
+import github from '../assets/insta.png'
+import linkedin from '../assets/link.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -9,6 +12,31 @@ AOS.init({
     duration : 2000
 })
 
+// window.addEventListener('DOMContentLoaded', () => {
+//     window.fbAsyncInit = function() {
+//         FB.init({
+//         appId      : 2636806746444538,
+//         cookie     : true,
+//         xfbml      : true,
+//         version    : 'v9.0'
+//         });
+        
+//         FB.AppEvents.logPageView();   
+//     };
+
+//     (function(d, s, id){
+//         var js, fjs = d.getElementsByTagName(s)[0];
+//         if (d.getElementById(id)) {return;}
+//         js = d.createElement(s); js.id = id;
+//         js.src = "https://connect.facebook.net/en_US/sdk.js";
+//         fjs.parentNode.insertBefore(js, fjs);
+//     }(document, 'script', 'facebook-jssdk'));
+
+//     FB.getLoginStatus(function(response) {
+//         statusChangeCallback(response);
+//     });
+// })
+    
 const App = () => {
     const { state } = useContext(ThemeContext);
     return (
@@ -74,7 +102,7 @@ const App = () => {
                 <div className='Design-page'>
                     <div className='home-focuses'>
                         <section className='img-field'>
-                            <img src={ spinner } alt='cross' />
+                            <img id="spinner" src={ spinner } alt='cross' />
                         </section>
                         <section className='text-field'>
                             <div>
@@ -103,6 +131,17 @@ const App = () => {
                             </div>
                         </section>
                     </div>
+                </div>
+            </div>
+            <div className='social-links'>
+                <div className='fb'>
+                    <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ fb } alt='facebook' />
+                </div>
+                <div className='github'>
+                    <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ github } alt='github' />
+                </div>
+                <div className='linkedin'>
+                    <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ linkedin } alt='linkedin' />
                 </div>
             </div>
             <div className='footer'>
