@@ -109,13 +109,13 @@ const App = () => {
                 </div>
             </div>
             <div className='social-links'>
-                <div className='fb'>
+                <div data-aos="zoom-out-right" className='fb'>
                     <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ fb } alt='facebook' />
                 </div>
-                <div className='github'>
+                <div data-aos="zoom-out-center" className='github'>
                     <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ github } alt='github' />
                 </div>
-                <div className='linkedin'>
+                <div data-aos="zoom-out-left" className='linkedin'>
                     <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ linkedin } alt='linkedin' />
                 </div>
             </div>
