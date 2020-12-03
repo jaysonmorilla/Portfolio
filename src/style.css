@@ -448,7 +448,7 @@ button:hover::before {
 
 
 /* ------ Smallest Screen Phone ------ */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     * {
         font-size: 13px;
         font-weight: lighter;
