@@ -15,6 +15,11 @@
     color: #fff;
 }
 
+/* Icon font-size */
+.fa-lg, .svg-inline--fa {
+    font-size: 4.5rem; 
+}
+
 html, body, #Root{
     width: 100%;
     overflow-x: hidden;
@@ -404,6 +409,12 @@ button:hover::before {
     justify-content: space-evenly;
 }
 
+.fb,
+.github,
+.linkedin {
+    cursor: pointer;
+}
+
 .fb img, .github img, .linkedin img {
     width: 70px;
     cursor: pointer;
@@ -421,9 +432,10 @@ button:hover::before {
 }
 
 .languages {
-    width: 100%;
+    max-width: 85%;
     display: block;
     padding-bottom: 1em;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

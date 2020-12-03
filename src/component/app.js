@@ -2,11 +2,14 @@ import React, { useContext } from 'react'
 import { Navbar } from './navbar'
 import { ThemeContext } from '../context/ThemeContext'
 import spinner from '../assets/headerImg.png'
-import fb from '../assets/fb.png'
-import github from '../assets/github.png'
-import linkedin from '../assets/link.png'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {fab, faFacebookSquare, faLinkedinIn, faGithub} from "@fortawesome/free-brands-svg-icons"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+
+library.add(fab, faFacebookSquare, faLinkedinIn, faGithub);
 
 AOS.init({
     duration : 2000
@@ -35,40 +38,36 @@ const App = () => {
                     <div className='graphics-content'>
                         <section style={{border: `1px solid ${ state.primary }`}} className='grph-text' data-aos='zoom-in-right'>
                             <div className='grph-content'>
-                                <h2 style={{color: state.primary}}>Graphics</h2>
+                                <h2 style={{color: state.primary}}>About</h2>
                                 <h3>
-                                    awwddawawdd wwdddaa awadd wd awawddwww dad 
-                                    dw dsassd wwawa waaddaa ssdsd awawdwd daasss a as 
-                                    sddad asa dsdas asasd sadas dsdsaa awdw ad
-                                    awwddawawdd wwdddaa awadd wd awawddwww dad 
-                                    dw dsassd wwawa waaddaa ssdsd awawdwd daasss a as 
-                                    sddad asa dsdas asasd sadas dsdsaaa
+                                    I'm obsessed to do things especially when it comes to 
+                                    web development. I created a simple "System Project" in
+                                    school. It was a Reservation System for renting a pool
+                                    for an events. I love working in the UI/UX of a website,
+                                    and I especially love to show my finish project to my fellow
+                                    developer. 
                                 </h3>
                             </div>
                         </section>
                         <section style={{border: `1px solid ${ state.primary }`}} className='log-text' data-aos='zoom-out-up'>
                             <div className='log-content'>
-                                <h2 style={{color: state.primary}}>Logo</h2>
+                                <h2 style={{color: state.primary}}>Focus</h2>
                                 <h3>
-                                    awwddawawdd wwdddaa awadd wd awawddwww dad 
-                                    dw dsassd wwawa waaddaa ssdsd awawdwd daasss a as 
-                                    sddad asa dsdas asasd sadas dsdsaa awdw ad
-                                    awwddawawdd wwdddaa awadd wd awawddwww dad 
-                                    dw dsassd wwawa waaddaa ssdsd awawdwd daasss a as 
-                                    sddad asa dsdas asasd sadas dsdsaaa
+                                    My specialty is about front-end web development 
+                                    using React js, making sketches turns into a nice
+                                    Semantic HTML & CSS application. I do a bit of 
+                                    Back-end using Webpack, Node js, Express js and
+                                    MySQL. I do sketching designs in Adobe Photoshop CS5.
                                 </h3>
                             </div>
                         </section>
                         <section style={{border: `1px solid ${ state.primary }`}} className='art-text' data-aos='zoom-in-left'>
                             <div className='art-content'>
-                                <h2 style={{color: state.primary}}>Art Work</h2>
+                                <h2 style={{color: state.primary}}>Goal</h2>
                                 <h3>
-                                    awwddawawdd wwdddaa awadd wd awawddwww dad 
-                                    dw dsassd wwawa waaddaa ssdsd awawdwd daasss a as 
-                                    sddad asa dsdas asasd sadas dsdsaa awdw ad
-                                    awwddawawdd wwdddaa awadd wd awawddwww dad 
-                                    dw dsassd wwawa waaddaa ssdsd awawdwd daasss a as 
-                                    sddad asa dsdas asasd sadas dsdsaaa
+                                    I'm planning to learn both Front-end and Back-end. 
+                                    In order to do that, I need to be exposed to a real
+                                    work and to be able to see, peoples loving my work.
                                 </h3>
                             </div>
                         </section>
@@ -83,13 +82,9 @@ const App = () => {
                             <div>
                                 <h2 style={{color: state.primary}}>Example</h2>
                                 <article>
-                                    awwddawawdd wwdddaa awadd wd
-                                    awawddwww dad dw dsassd wwawa waaddaa
-                                    ssdsd awawdwd daasss a as sddad asa
-                                    dsdas asasd sadas dsdsaa awdw
-                                        ad awwddawawdd wwdddaa awadd wd awawddwww
-                                        dad dw dsassd wwawa waaddaa ssdsd awawdwd
-                                        daasss a as sddad asa dsdas asasd sadas dsdsaaa
+                                    I'm planning to learn both Front-end and Back-end. 
+                                    In order to do that, I need to be exposed to a real
+                                    work and to be able to see, peoples loving my work.
                                 </article>
                             </div>
                             <div>
@@ -110,13 +105,13 @@ const App = () => {
             </div>
             <div className='social-links'>
                 <div data-aos="zoom-out-right" className='fb'>
-                    <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ fb } alt='facebook' />
+                    <FontAwesomeIcon icon={['fab', 'facebook']} />
                 </div>
                 <div data-aos="zoom-out-center" className='github'>
-                    <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ github } alt='github' />
+                    <FontAwesomeIcon icon={['fab', 'github']} />
                 </div>
                 <div data-aos="zoom-out-left" className='linkedin'>
-                    <img style={{ filter: `invert() drop-shadow(0px 0px 2px ${state.primary})` }} src={ linkedin } alt='linkedin' />
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg" />
                 </div>
             </div>
             <div className='languages'>
@@ -124,6 +119,8 @@ const App = () => {
                 <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >css</h4>
                 <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >javascript</h4>
                 <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >git</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >node</h4>
+                <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >mysql</h4>
                 <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >webpack</h4>
                 <h4 style={{ textShadow: `0px 0px 18px ${state.bg}` }} >react</h4>
             </div>
