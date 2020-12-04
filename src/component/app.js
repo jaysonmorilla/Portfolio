@@ -105,13 +105,13 @@ const App = () => {
             </div>
             <div className='social-links'>
                 <div data-aos="zoom-out-right" className='fb'>
-                    <FontAwesomeIcon icon={['fab', 'facebook']} />
+                    <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '50%' }} icon={['fab', 'facebook']} />
                 </div>
                 <div data-aos="zoom-out-center" className='github'>
-                    <FontAwesomeIcon icon={['fab', 'github']} />
+                    <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '50%' }} icon={['fab', 'github']} />
                 </div>
                 <div data-aos="zoom-out-left" className='linkedin'>
-                    <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg" />
+                    <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '5%' }} icon={['fab', 'linkedin']} size="lg" />
                 </div>
             </div>
             <div className='languages'>
