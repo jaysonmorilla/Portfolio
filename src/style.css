@@ -17,11 +17,12 @@
 
 /* Icon font-size */
 .fa-lg, .svg-inline--fa {
-    font-size: 4.5rem; 
+    font-size: 4rem; 
 }
 
 html, body, #Root{
     width: 100%;
+    font-size: 16px;
     overflow-x: hidden;
     background-color: #000000;
 }
@@ -30,14 +31,19 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
 h2 {
     letter-spacing: 0.1em;
     font-weight: lighter;
     font-family: Goldman;
 }
 
-h2, span {
-    font-size: 25px;
+h2, 
+span {
+    font-size: 2rem;
 }
 
 span {
@@ -47,7 +53,7 @@ span {
 button {
     margin: 1em 0 0;
     padding: 0.7em;
-    font-size: 16px;
+    font-size: 1rem;
     color: #dddddd;
     border-radius: 10px;
     background-color: transparent;
@@ -81,7 +87,7 @@ input[type=color] {
     padding: 0;
     width: 1.5em;
     height: 1.5em;
-    font-size: 14px;
+    font-size: 1rem;
     background-color: transparent;
 }
 
@@ -151,7 +157,7 @@ button:hover::before {
     background: #33333355;
     z-index: 6;
     bottom: -28px;
-    font-size: 12px;
+    font-size: 1.1em;
     border-radius: 5px;
     text-align: center;
 }
@@ -182,7 +188,7 @@ button:hover::before {
     background: #33333355;
     z-index: 6;
     bottom: -28px;
-    font-size: 12px;
+    font-size: 1.1em;
     border-radius: 5px;
     text-align: center;
 }
@@ -213,7 +219,7 @@ button:hover::before {
     background: #33333355;
     z-index: 6;
     bottom: -28px;
-    font-size: 12px;
+    font-size: 1.1em;
     border-radius: 5px;
     text-align: center;
 }
@@ -295,7 +301,7 @@ button:hover::before {
     top: 1px;
 }
 
-.content-container::after {
+/* .content-container::after {
     content: '';
     position: absolute;
     background-color: #aaaaaa;
@@ -306,9 +312,9 @@ button:hover::before {
     display: block;
     z-index: 1;
     bottom: -1px;
-}
+} */
 
-.Design-page::after {
+/* .Design-page::after {
     content: '';
     position: absolute;
     background-color: #000;
@@ -319,7 +325,7 @@ button:hover::before {
     display: block;
     z-index: 1;
     bottom: -1px;
-}
+} */
 
 .text {
     line-height: 3em;
@@ -328,7 +334,6 @@ button:hover::before {
 .graphics-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -395,12 +400,6 @@ button:hover::before {
     justify-content: center;
 }
 
-
-.active {
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .social-links {
     width: 100%;
     display: flex;
@@ -443,7 +442,7 @@ button:hover::before {
 
 .languages h4 {
     font-family: goldman;
-    font-size: 17px;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0.5em;

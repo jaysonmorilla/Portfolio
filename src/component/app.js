@@ -16,7 +16,23 @@ AOS.init({
 })
     
 const App = () => {
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const animate = window.matchMedia("(max-width: 550px)").matches ? true : false;
+        const elem = document.getElementsByClassName('animation');
+
+        if(!animate){
+            return;
+        }
+
+        for(var data of elem) {
+            data.removeAttribute("data-aos");
+        }
+    });
+
+    
     const { state } = useContext(ThemeContext);
+
     return (
         <div className='home-page'>
             <div className='home-page-bg'>
@@ -33,84 +49,60 @@ const App = () => {
                             <button style={{border: `1px solid ${state.primary}`}} type='button'>Show Project</button>
                         </section>
                     </div>
-                </div>
-                <div id='content' className='content-container'>
-                    <div className='graphics-content'>
-                        <section style={{border: `1px solid ${ state.primary }`}} className='grph-text' data-aos='zoom-in-right'>
-                            <div className='grph-content'>
-                                <h2 style={{color: state.primary}}>About</h2>
-                                <h3>
-                                    I'm obsessed to do things especially when it comes to 
-                                    web development. I created a simple "System Project" in
-                                    school. It was a Reservation System for renting a pool
-                                    for an events. I love working in the UI/UX of a website,
-                                    and I especially love to show my finish project to my fellow
-                                    developer. 
-                                </h3>
-                            </div>
-                        </section>
-                        <section style={{border: `1px solid ${ state.primary }`}} className='log-text' data-aos='zoom-out-up'>
-                            <div className='log-content'>
-                                <h2 style={{color: state.primary}}>Focus</h2>
-                                <h3>
-                                    My specialty is about front-end web development 
-                                    using React js, making sketches turns into a nice
-                                    Semantic HTML & CSS application. I do a bit of 
-                                    Back-end using Webpack, Node js, Express js and
-                                    MySQL. I do sketching designs in Adobe Photoshop CS5.
-                                </h3>
-                            </div>
-                        </section>
-                        <section style={{border: `1px solid ${ state.primary }`}} className='art-text' data-aos='zoom-in-left'>
-                            <div className='art-content'>
-                                <h2 style={{color: state.primary}}>Goal</h2>
-                                <h3>
-                                    I'm planning to learn both Front-end and Back-end. 
-                                    In order to do that, I need to be exposed to a real
-                                    work and to be able to see, peoples loving my work.
-                                </h3>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div className='Design-page'>
-                    <div className='home-focuses'>
-                        <section className='img-field'>
-                            <img id="spinner" src={ spinner } alt='cross' />
-                        </section>
-                        <section className='text-field'>
-                            <div>
-                                <h2 style={{color: state.primary}}>Example</h2>
-                                <article>
-                                    I'm planning to learn both Front-end and Back-end. 
-                                    In order to do that, I need to be exposed to a real
-                                    work and to be able to see, peoples loving my work.
-                                </article>
-                            </div>
-                            <div>
-                                <h2 style={{color: state.primary}}>Example</h2>
-                                <article>
-                                    awwddawawdd wwdddaa awadd wd
-                                    awawddwww dad dw dsassd wwawa waaddaa
-                                    ssdsd awawdwd daasss a as sddad asa
-                                    dsdas asasd sadas dsdsaa awdw
-                                        ad awwddawawdd wwdddaa awadd wd awawddwww
-                                        dad dw dsassd wwawa waaddaa ssdsd awawdwd
-                                        daasss a as sddad asa dsdas asasd sadas dsdsaaa
-                                </article>
-                            </div>
-                        </section>
+                    <div id='content' className='content-container'>
+                        <div className='graphics-content'>
+                            <section className='grph-text animation' data-aos='zoom-in-right'>
+                                <div className='grph-content'>
+                                    <h2 style={{color: state.primary}}>About</h2>
+                                    <h3>
+                                        I'm obsessed to do things especially when it comes to 
+                                        web development. I created a simple "System Project" in
+                                        school during my thesis in Software Development. It was
+                                        a Reservation System for renting a pool for an events. 
+                                        I love to work in the UI/UX of a website and especially,
+                                        I love to show my finish project to my fellow developer. 
+                                    </h3>
+                                </div>
+                            </section>
+                            <section className='log-text animation' data-aos='zoom-out-up'>
+                                <div className='log-content'>
+                                    <h2 style={{color: state.primary}}>Focus</h2>
+                                    <h3>
+                                        My specialty is about front-end web development 
+                                        using React js, making sketches turns into a nice
+                                        Semantic HTML & CSS application. I do a bit of 
+                                        Back-end using Webpack, Node js, Express js and
+                                        MySQL. I do sketching designs in Adobe Photoshop CS5.
+                                    </h3>
+                                </div>
+                            </section>
+                            <section className='art-text animation' data-aos='zoom-in-left'>
+                                <div className='art-content'>
+                                    <h2 style={{color: state.primary}}>Goal</h2>
+                                    <h3>
+                                        I'm planning to learn both Front-end and Back-end. 
+                                        In order to do that, I need to be exposed to a real
+                                        work and to be able to see, peoples loving my work.
+                                    </h3>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div className='Design-page'>
+                <div className='envelope'>
+                        
+                </div>
+            </div>
             <div className='social-links'>
-                <div data-aos="zoom-out-right" className='fb'>
+                <div data-aos="zoom-out-right" className='fb animation'>
                     <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '50%' }} icon={['fab', 'facebook']} />
                 </div>
-                <div data-aos="zoom-out-center" className='github'>
+                <div data-aos="zoom-out-center" className='github animation'>
                     <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '50%' }} icon={['fab', 'github']} />
                 </div>
-                <div data-aos="zoom-out-left" className='linkedin'>
+                <div data-aos="zoom-out-left" className='linkedin animation'>
                     <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '5%' }} icon={['fab', 'linkedin']} size="lg" />
                 </div>
             </div>
