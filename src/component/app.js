@@ -90,11 +90,6 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <div className='Design-page'>
-                <div className='envelope'>
-                        
-                </div>
-            </div>
             <div className='social-links'>
                 <div data-aos="zoom-out-right" className='fb animation'>
                     <FontAwesomeIcon style={{ boxShadow: `0px 0px 0.5em ${state.bg}`, borderRadius: '50%' }} icon={['fab', 'facebook']} />

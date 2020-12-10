@@ -17,7 +17,7 @@
 
 /* Icon font-size */
 .fa-lg, .svg-inline--fa {
-    font-size: 4rem; 
+    font-size: 5rem; 
 }
 
 html, body, #Root{
@@ -403,7 +403,7 @@ button:hover::before {
 .social-links {
     width: 100%;
     display: flex;
-    padding: 7em 0;
+    margin: 10em 0 5em;
     align-items: center;
     justify-content: space-evenly;
 }
