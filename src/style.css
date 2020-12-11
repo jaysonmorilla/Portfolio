@@ -157,7 +157,7 @@ button:hover::before {
     background: #33333355;
     z-index: 6;
     bottom: -28px;
-    font-size: 1.1em;
+    font-size: 0.8em;
     border-radius: 5px;
     text-align: center;
 }
@@ -188,7 +188,7 @@ button:hover::before {
     background: #33333355;
     z-index: 6;
     bottom: -28px;
-    font-size: 1.1em;
+    font-size: 0.8em;
     border-radius: 5px;
     text-align: center;
 }
@@ -219,7 +219,7 @@ button:hover::before {
     background: #33333355;
     z-index: 6;
     bottom: -28px;
-    font-size: 1.1em;
+    font-size: 0.8em;
     border-radius: 5px;
     text-align: center;
 }

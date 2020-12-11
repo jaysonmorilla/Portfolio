@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Navbar } from './navbar'
 import { ThemeContext } from '../context/ThemeContext'
-import spinner from '../assets/headerImg.png'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {fab, faFacebookSquare, faLinkedinIn, faGithub} from "@fortawesome/free-brands-svg-icons"
@@ -24,12 +23,11 @@ const App = () => {
         if(!animate){
             return;
         }
-
+        //Remove AOS on mobile devices.
         for(var data of elem) {
             data.removeAttribute("data-aos");
         }
     });
-
     
     const { state } = useContext(ThemeContext);
 
