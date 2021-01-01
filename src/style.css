@@ -263,9 +263,9 @@ button:hover::before {
 }
 
 .home-bg {
-    width: 85%;
+    max-width: 65em;
     margin: 0 auto;
-    transform: translate(0px, 10vh);
+    transform: translate(0px, 5vh);
     box-shadow: 0px 10px 15px 15px #000000;
 }
 

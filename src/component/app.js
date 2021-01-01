@@ -37,7 +37,7 @@ const App = () => {
                 <div className='home-page-img'></div>
                 <div className='home-page-gradient'></div>
             </div>
-            <Navbar status="Home" />
+            {/* <Navbar status="Home" /> --- still need some modification. */}
             <div className='home-bg'>
                 <div className='home-header'>
                     <div className='home-header-content'>
